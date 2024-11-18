@@ -9,7 +9,7 @@ This API provides comprehensive flight logging capabilities, including flight tr
 
 ## Features
 
-- ✈️ Flight log management with pagination and sorting
+-  Flight log management with pagination and sorting
 -  Aircraft-specific flight queries
 -  Flight hours calculation and analytics
 -  Status-based filtering
