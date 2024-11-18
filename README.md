@@ -10,10 +10,10 @@ This API provides comprehensive flight logging capabilities, including flight tr
 ## Features
 
 - ✈️ Flight log management with pagination and sorting
-- 🛩️ Aircraft-specific flight queries
-- ⏱️ Flight hours calculation and analytics
-- 📊 Status-based filtering
-- 🔍 Advanced search capabilities
+-  Aircraft-specific flight queries
+-  Flight hours calculation and analytics
+-  Status-based filtering
+-  Advanced search capabilities
 
 ## API Documentation
 
@@ -29,10 +29,8 @@ http://localhost:3000/api/v1/flights
 ### Endpoints
 
 #### 1. Get Flight Logs
-
 http
 GET /
-
 
 Query Parameters:
 - `page` (optional): Page number (default: 1)
