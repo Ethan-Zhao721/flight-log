@@ -85,6 +85,16 @@ https://github.com/Ethan-Zhao721/flights-log-api/tree/main
 npm run generate-data
 ```
 
+### Test Case
+
+```
+npm run test
+```
+```
+npm run test:coverage
+```
+test cases only for the getFlightsByAircraft endpoint
+
 ### MongoDB Aggregation
 
 $match: Filters records where status is "landed" and the arrivalTime is within startDate and endDate.
@@ -103,6 +113,13 @@ Filtering in the $match stage
 Sorting (if needed)
 Range operations on dates
 
+### Quert Cammand
+```
+db.getCollection('flightlogs').find({})
+db.getCollection('flightlogs').count({})
+
+db.flightlogs.deleteMany({})
+```
 
 
 

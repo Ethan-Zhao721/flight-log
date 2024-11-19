@@ -15,15 +15,18 @@ mongoose
     const existingCount = await FlightLog.countDocuments();
     if (existingCount === 0) {
       console.log("No existing data found. Generating new records...");
-      generateData();
+      await generateData();
     } else {
       console.log(
         `Found ${existingCount} existing records. Skipping data generation.`,
       );
+      await mongoose.connection.close();
+      process.exit(0);
     }
   })
   .catch((error) => {
     console.error("Error connecting to MongoDB:", error);
+    mongoose.connection.close();
     process.exit(1);
   });
 
