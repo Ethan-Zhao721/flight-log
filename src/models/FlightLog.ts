@@ -1,4 +1,4 @@
-import mongoose, { Schema, Document } from 'mongoose';
+import mongoose, { Schema, Document } from "mongoose";
 
 export interface IFlightLog extends Document {
   flightId: string;
@@ -25,4 +25,4 @@ const FlightLogSchema: Schema = new Schema({
 FlightLogSchema.index({ aircraftId: 1, status: 1 });
 FlightLogSchema.index({ departureTime: 1 });
 
-export default mongoose.model<IFlightLog>('FlightLog', FlightLogSchema);
+export default mongoose.model<IFlightLog>("FlightLog", FlightLogSchema);

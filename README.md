@@ -1,4 +1,4 @@
-author:@JianZhao
+# Author:@Jian Zhao
 # Flight Logs API
 
 A robust RESTful API service for managing aircraft flight logs, built with Express.js and TypeScript.
@@ -74,6 +74,35 @@ Query Parameters:
 4. Configure environment variables
 5. Start the server
 
-Download APIs from 
-
+### Download APIs from 
 https://github.com/Ethan-Zhao721/flights-log-api/tree/main
+
+
+
+### Data Generation
+
+```
+npm run generate-data
+```
+
+### MongoDB Aggregation
+
+$match: Filters records where status is "landed" and the arrivalTime is within startDate and endDate.
+$project: Converts the durationMinutes field to durationHours by dividing by 60.
+$group: Sums up the durationHours to get the total flight hours.
+
+# index stragety consideration: 
+composite index on (status, arrivalTime)
+rationale: 
+1. The query will frequently filter by both status and arrivalTime.
+2. status choice is limited, so status first and it's an exact match.
+3. arrivalTime is a range query, so it's after status.
+
+MongoDB can use these indexes for:
+Filtering in the $match stage
+Sorting (if needed)
+Range operations on dates
+
+
+
+
