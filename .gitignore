@@ -13,4 +13,6 @@ dist/
 build/
 .idea/
 .vscode/
-
+coverage/
+.coverage
+coverage.json
