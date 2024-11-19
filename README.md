@@ -79,7 +79,7 @@ https://github.com/Ethan-Zhao721/flights-log-api/tree/main
 
 
 
-### Data Generation
+### Data Generation (by default it will generate 1000000 records)
 
 ```
 npm run generate-data
@@ -113,11 +113,14 @@ Filtering in the $match stage
 Sorting (if needed)
 Range operations on dates
 
-### Quert Cammand
+### Query Cammand
 ```
 db.getCollection('flightlogs').find({})
+```
+```
 db.getCollection('flightlogs').count({})
-
+```
+```
 db.flightlogs.deleteMany({})
 ```
 
