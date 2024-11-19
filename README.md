@@ -91,7 +91,7 @@ $match: Filters records where status is "landed" and the arrivalTime is within s
 $project: Converts the durationMinutes field to durationHours by dividing by 60.
 $group: Sums up the durationHours to get the total flight hours.
 
-# index stragety consideration: 
+### index stragety consideration: 
 composite index on (status, arrivalTime)
 rationale: 
 1. The query will frequently filter by both status and arrivalTime.
