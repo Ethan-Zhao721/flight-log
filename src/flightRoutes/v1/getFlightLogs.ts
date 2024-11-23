@@ -1,11 +1,10 @@
 import { Request, Response, NextFunction } from "express";
 import FlightLog from "../../models/FlightLog";
-import { MONGODB } from "../../constant";
+import { MONGODB, HttpStatus, ERROR_MESSAGES } from "../../constant";
 import {
   createSuccessResponse,
   createErrorResponse,
 } from "../../utils/response.utils";
-import { HttpStatus, ERROR_MESSAGES } from "../../constant";
 import { validateQueryParams } from "../v1-validation/getFlightsLogsValidation";
 
 // Retrieve Flight Logs with Pagination and Sorting

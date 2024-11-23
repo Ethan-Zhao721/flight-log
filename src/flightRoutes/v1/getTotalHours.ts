@@ -1,11 +1,10 @@
 import { Request, Response, NextFunction } from "express";
 import FlightLog from "../../models/FlightLog";
-import { HttpStatus } from "../../constant";
+import { HttpStatus, FLIGHT_STATUS, ERROR_MESSAGES } from "../../constant";
 import {
   createSuccessResponse,
   createErrorResponse,
 } from "../../utils/response.utils";
-import { FLIGHT_STATUS, ERROR_MESSAGES } from "../../constant";
 import { validateQueryParams } from "../v1-validation/getTotalHoursValidation";
 
 //  Calculate Total Flight Hours Within a Date Range

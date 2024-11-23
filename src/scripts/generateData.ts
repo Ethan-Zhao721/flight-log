@@ -93,4 +93,4 @@ const generateData = async () => {
   }
 };
 
-export const connectDB = async () => {};
+// export const connectDB = async () => {};
