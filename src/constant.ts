@@ -6,6 +6,8 @@ export const FLIGHT_STATUS = {
 } as const;
 
 export const ALLOWED_SORT_FIELDS = {
+  FLIGHT_ID: "flightId",
+  DEPARTURE_AIRPORT: "departureAirport",
   DEPARTURE_TIME: "departureTime",
   ARRIVAL_TIME: "arrivalTime",
   STATUS: "status",
